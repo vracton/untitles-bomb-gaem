@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
 
-app.use("/", express.static(path.join(__dirname, "/client/main")))
+app.use("/", express.static(path.join(__dirname, "/client/testing")))
 
 server.listen(3000, () => {
   console.log("socket listening on port 3000");
