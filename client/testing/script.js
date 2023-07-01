@@ -1,6 +1,7 @@
 var socket = io();
 var modulesFromCenter = {x:0, y:0}
 var moduleCount = 9
+var strikeCount = 0
 
 function updateBombPos(){
   let x, y
@@ -17,19 +18,24 @@ function updateBombPos(){
   document.getElementById("bomb").style.transform = "translate("+x+", "+y+")"
 }
 
+function addStrike(){
+  console.log("strike")
+  strikeCount++
+  if (strikeCount >= 3){
+    console.log("yu died")
+  }
+}
+
+function clickSound(){
+  console.log("clicked")
+}
+
+function moduleSolved(){
+  console.log("moduleSolved")
+}
+
 document.onkeydown = (e) => {
-  if (e.key === "e") {
-    // const count = Number(prompt());
-    // document.documentElement.style.setProperty("--moduleCountSqrt", Math.ceil(Math.sqrt(count)));
-    // moduleCount = count
-    // document.getElementById("bomb").innerHTML = ""
-    // for (let i = 1; i <= count; i++) {
-    //   const module = document.createElement("div")
-    //   module.innerText = i
-    //   module.classList.add("module")
-    //   document.getElementById("bomb").appendChild(module)
-    // }
-  } else if (e.key === "ArrowUp") {
+  if (e.key === "ArrowUp") {
     if (modulesFromCenter.y < Math.sqrt(moduleCount) - 2) {
       modulesFromCenter.y++
       updateBombPos()
@@ -51,3 +57,8 @@ document.onkeydown = (e) => {
     }
   }
 };
+
+window.onload = () => {
+  buttonModuleT = new ButtonModule(1)
+  buttonModuleT.enable()
+}

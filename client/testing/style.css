@@ -70,7 +70,7 @@ button {
   height: 100%;
   font-size: 6vw;
   border: none;
-  background-color: #e30000;
+  background-color: #04e300;
   color: white;
   font-weight: bold;
   box-shadow: 0 0 0 100vmax inset rgb(0 0 0/0%);
@@ -140,6 +140,53 @@ button {
   color: white;
 }
 
+.hexAnswerDiv {
+  background-color: black;
+  width: calc(90% - 8px);
+  height: calc(30% - 12px);
+  margin-left: calc(5% + 4px);
+  margin-top: 10px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 4vw;
+  color: white;
+  animation: hexAnswerAni 6s;
+  animation-timing-function: steps(1, jump-start);
+  animation-iteration-count: infinite;
+}
+
+@keyframes hexAnswerAni {
+  0% {
+    background-color: black;
+  }
+  17% {
+    background-color: black;
+    box-shadow: 0 0 0px white;
+  }
+  33% {
+    background-color: white;
+    box-shadow: 0 0 24px white;
+  }
+  50% {
+    background-color: red;
+    box-shadow: 0 0 24px red;
+  }
+  66% {
+    background-color: yellow;
+    box-shadow: 0 0 24px yellow;
+  }
+  83% {
+    background-color: green;
+    box-shadow: 0 0 24px green;
+  }
+  100% {
+    background-color: blue;
+    box-shadow: 0 0 24px blue;
+  }
+}
+
 .submitBtn {
   background-color: #0acb00;
   width: calc(80% - 8px);
@@ -157,7 +204,7 @@ button {
 }
 
 .submitBtn::before {
-  content: "Submit";
+  content: "Enter";
 }
 
 .submitBtn:hover {

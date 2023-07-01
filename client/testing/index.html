@@ -11,50 +11,60 @@
   <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
-  <!--Modules: Button✅, Reaction, Timer✅, Sequence, Addition, Switches?, Hex✅, Wires, Multiply✅, Timing, Echo Needy-->
-  <div id="bomb">
-    <div class="module">
-      <button class="buttonModuleMain">Detonate</button>
-      <button class="buttonModuleSec buttonModuleTop">^^^^</button>
-      <button class="buttonModuleSec buttonModuleBot">^^^^</button>
-    </div>
-    <div class="module">
-      <div class="displayDiv"><p>54 97 2A FF</p></div>
-      <input type="text" placeholder="Answer Here" class="answerDiv"></input>
-      <button class="submitBtn"></button>
-    </div>
-    <div class="module">
-      <div class="displayDiv"><p>HA FE</p></div>
-      <input type="text" placeholder="Answer Here" class="answerDiv"></input>
-      <button class="submitBtn"></button>
-    </div>
-    <div class="module">
-      <div class="dimPlateCont">
-        <p class="timer"><span>00</span><span class="timerSemicolon">:</span><span>37</span></p>
-        <div class="strikesCont">
-          <div class="strike usedStrike"></div>
-          <div class="strike usedStrike"></div>
-          <div class="strike"></div>
-        </div>
-      </div>
-    </div>
-    <div class="module">
-      <p class="additionDisplay">904</p>
-      <p class="additionSecDisplay">0</p>
-      <div class="additionInput">
-        <button class="additionBtn">1</button>
-        <button class="additionBtn">5</button>
-        <button class="additionBtn">20</button>
-        <button class="additionBtn">50</button>
-        <button class="additionBtn">200</button>
-        <button class="additionBtn aBReset">Reset</button>
-      </div>
-    </div>
-    <div class="module">6</div>
-    <div class="module">7</div>
-    <div class="module">8</div>
-    <div class="module">9</div>
+  <div style="display: none;" id="buttonModule">
+    <button class="buttonModuleMain" id="main">Detonate</button>
+    <button class="buttonModuleSec buttonModuleTop" id="top">^^^^</button>
+    <button class="buttonModuleSec buttonModuleBot" id="bottom">^^^^</button>
   </div>
+  <div style="display: none;" id="hexaModule">
+    <div class="displayDiv"><p>54 97 2A FF</p></div>
+      <input type="text" placeholder="Answer Here" class="answerDiv"></input>
+      <button class="submitBtn"></button>
+  </div>
+  <div style="display: none;" id="timerModule">
+    <div class="dimPlateCont">
+      <p class="timer"><span>00</span><span class="timerSemicolon">:</span><span>37</span></p>
+      <div class="strikesCont">
+        <div class="strike usedStrike"></div>
+        <div class="strike usedStrike"></div>
+        <div class="strike"></div>
+      </div>
+    </div>
+  </div>
+  <div style="display: none;" id="colorModule">
+    <div class="displayDiv"><p>90 BD</p></div>
+      <div placeholder="Answer Here" class="hexAnswerDiv"></div>
+      <button class="submitBtn"></button>
+  </div>
+  <div style="display: none;" id="multiplyModule">
+    <div class="displayDiv"><p>HA FE</p></div>
+      <input type="text" placeholder="Answer Here" class="answerDiv"></input>
+      <button class="submitBtn"></button>
+  </div>
+  <div style="display: none;" id="additionModule">
+    <p class="additionDisplay">904</p>
+    <p class="additionSecDisplay">0</p>
+    <div class="additionInput">
+      <button class="additionBtn">1</button>
+      <button class="additionBtn">5</button>
+      <button class="additionBtn">20</button>
+      <button class="additionBtn">50</button>
+      <button class="additionBtn">200</button>
+      <button class="additionBtn aBReset">Reset</button>
+    </div>
+  </div>
+  <div id="bomb">
+    <div class="module" id="m1"></div>
+    <div class="module" id="m2"></div>
+    <div class="module" id="m3"></div>
+    <div class="module" id="m4"></div>
+    <div class="module" id="m5"></div>
+    <div class="module" id="m6"></div>
+    <div class="module" id="m7"></div>
+    <div class="module" id="m8"></div>
+    <div class="module" id="m9"></div>
+  </div>
+  <script src="/classes.js"></script>
   <script src="/script.js"></script>
 </body>
 </html>
