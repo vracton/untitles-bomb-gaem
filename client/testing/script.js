@@ -46,7 +46,7 @@ function clickSound(){
 
 function moduleSolved(){
   modulesSolved++
-  if (modulesSolved == 1){
+  if (modulesSolved == 8){
     completed = true
     endGame()
   }
@@ -58,12 +58,27 @@ function endGame(){
   if (playing){
     playing = false
     timeLeft = moduleArray[1][1].stop()
-    activeModule.disable()
-    if (completed){
-      console.log("you live")
-    } else {
-      console.log("you died")
+    if (timeLeft < 0){
+      timeLeft = 0
     }
+    activeModule.disable()
+    document.getElementById("modules").innerHTML = "You completed "+modulesSolved+"/8 modules."
+    if (timeLeft === 1){
+      document.getElementById("timeLeft").innerHTML = "You had 1 second left."
+    } else {
+      document.getElementById("timeLeft").innerHTML = "You had "+timeLeft+" seconds left."
+    }
+    if (completed){
+      document.getElementById("result").innerHTML = "<span style='color:#04e300'>You defused the bomb and won!</span>"
+    } else {
+      if (strikeCount === 3){
+        document.getElementById("result").innerHTML = "<span style='color:#e30000'>You made too many mistakes!</span>"
+      } else {
+        document.getElementById("result").innerHTML = "<span style='color:#e30000'>You ran out of time!</span>"
+      }
+    }
+    document.getElementById("bomb").style.display = "none"
+    document.getElementById("resultScreen").style.display = "block"
   }
 }
 
