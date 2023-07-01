@@ -19,16 +19,16 @@ function updateBombPos(){
 
 document.onkeydown = (e) => {
   if (e.key === "e") {
-    const count = Number(prompt());
-    document.documentElement.style.setProperty("--moduleCountSqrt", Math.ceil(Math.sqrt(count)));
-    moduleCount = count
-    document.getElementById("bomb").innerHTML = ""
-    for (let i = 1; i <= count; i++) {
-      const module = document.createElement("div")
-      module.innerText = i
-      module.classList.add("module")
-      document.getElementById("bomb").appendChild(module)
-    }
+    // const count = Number(prompt());
+    // document.documentElement.style.setProperty("--moduleCountSqrt", Math.ceil(Math.sqrt(count)));
+    // moduleCount = count
+    // document.getElementById("bomb").innerHTML = ""
+    // for (let i = 1; i <= count; i++) {
+    //   const module = document.createElement("div")
+    //   module.innerText = i
+    //   module.classList.add("module")
+    //   document.getElementById("bomb").appendChild(module)
+    // }
   } else if (e.key === "ArrowUp") {
     if (modulesFromCenter.y < Math.sqrt(moduleCount) - 2) {
       modulesFromCenter.y++
