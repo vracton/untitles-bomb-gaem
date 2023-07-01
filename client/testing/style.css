@@ -169,7 +169,6 @@ button {
   margin: 5%;
   width: 90%;
   height: 90%;
-
   position: relative;
   border-radius: 10px;
   background-color: rgba(150, 150, 150, 1);
@@ -250,4 +249,79 @@ button {
   background-color: red;
   border: 3px solid red;
   box-shadow: 0 0 9px #ff0000;
+}
+
+.additionDisplay {
+  display: flex;
+  background-color: #14181d;
+  width: calc(100% - 24px);
+  height: calc(25% - 12px);
+  margin: 8px;
+  margin-left: 8px;
+  border-radius: 10px;
+  border: 4px solid #14181d;
+  font-size: 6vw;
+  color: whitesmoke;
+  text-shadow: 0 0 0.5vw whitesmoke;
+  text-align: center;
+  align-items:center;
+  justify-content:center;
+}
+
+.additionSecDisplay {
+  display: flex;
+  background-color: #14181d;
+  width: calc(80% - 24px);
+  height: calc(20% - 12px);
+  margin: 8px;
+  margin-left: calc(10% + 8px);
+  border-radius: 10px;
+  border: 4px solid #14181d;
+  font-size: 4vw;
+  color: whitesmoke;
+  text-shadow: 0 0 0.5vw whitesmoke;
+  text-align: center;
+  align-items:center;
+  justify-content:center;
+}
+
+.additionInput {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 6px;
+  width: calc(80% - 24px);
+  height: calc(55% - 28px);
+  bottom: 0%;
+  margin: 8px;
+  margin-left: calc(10% + 12px);
+  border-radius: 10px;
+  font-size: 4vw;
+  color: whitesmoke;
+  text-align: center;
+  align-items:center;
+  justify-content:center;
+}
+
+.additionBtn {
+  position: relative;
+  height: 50%;
+  width: calc(100% / 3 - 4px);
+  background-color: #cecece;
+  font-size: 0.75em;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 0 100vmax inset rgb(0 0 0/0%);
+  transition: 0.5s;
+}
+
+.additionBtn:hover {
+  box-shadow: 0 0 0 100vmax inset rgb(0 0 0/20%);
+}
+
+.aBReset {
+  background-color: #d50000;
 }
