@@ -67,16 +67,29 @@ function endGame(){
   }
 }
 
+function randomModule(pos){
+  const randInt = Math.floor(Math.random()*2)
+  if (randInt === 0){
+    return new ButtonModule(pos)
+  } else if (randInt === 1) {
+    return new HexaModule(pos)
+  }
+}
+
 //make smart enable and generation
 window.onload = () => {
   //load modules
-  buttonModuleT = new ButtonModule(1)
-  moduleArray[0][0] = buttonModuleT
-  hexaModuleT = new HexaModule(2)
-  moduleArray[0][1] = hexaModuleT
-  timerModuleT = new TimerModule(5)
-  moduleArray[1][1] = timerModuleT
-  activeModule = timerModuleT
+  moduleArray[0][0] = randomModule(1)
+  moduleArray[0][1] = randomModule(2)
+  moduleArray[0][2] = randomModule(3)
+  moduleArray[1][0] = randomModule(4)
+  moduleArray[1][2] = randomModule(6)
+  moduleArray[2][0] = randomModule(7)
+  moduleArray[2][1] = randomModule(8)
+  moduleArray[2][2] = randomModule(9)
+  timerModule = new TimerModule(5)
+  moduleArray[1][1] = timerModule
+  activeModule = timerModule
   activeModule.enable()
   //set up keybinds
   document.onkeydown = (e) => {

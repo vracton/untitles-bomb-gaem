@@ -172,7 +172,7 @@ class TimerModule extends Module {
 
   randomize() {
     this.solved = false;
-    this.timeLeft = 10;
+    this.timeLeft = 60;
   }
 
   addLogic() {
