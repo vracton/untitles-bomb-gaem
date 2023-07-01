@@ -111,3 +111,40 @@ class ButtonModule extends Module {
     this.moduleCont.querySelector("#main").style.backgroundColor = "#04e300"
   }
 }
+
+class HexaModule extends Module {
+  constructor(moduleNumber){
+    super()
+    this.moduleCont = document.getElementById("m"+moduleNumber)
+    this.create("hexaModule")
+  }
+
+  randomize(){
+    let displayString = ""
+    this.wantedString = ""
+    for (let i = 0; i < 4; i++){
+      const letter = alpha[Math.floor(Math.random()*alpha.length)];
+      this.wantedString+=letter
+      displayString+=letter.charCodeAt(0).toString(16)+" "
+    }
+    displayString = displayString.trimEnd().toUpperCase()
+    this.moduleCont.querySelector("#display").innerHTML = displayString
+    console.log(this.wantedString)
+  }
+
+  addLogic(){
+    this.moduleCont.querySelector("#submit").addEventListener("click", ()=>{
+      clickSound()
+      if (this.moduleCont.querySelector("#answer").value.toLowerCase().trim() === this.wantedString){
+        this.disable()
+        this.solved()
+      } else {
+        this.reset()
+      }
+    })
+  }
+
+  solveState() {
+    this.moduleCont.querySelector("#display").innerHTML = "Defused"
+  }
+}

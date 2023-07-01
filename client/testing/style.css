@@ -9,6 +9,18 @@
   src: url(7segment.ttf);
 }
 
+* {
+  user-select: none
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+input:disabled {
+  cursor: not-allowed;
+}
+
 body {
   font-family: sans-serif;
   background-size: 40px 40px;

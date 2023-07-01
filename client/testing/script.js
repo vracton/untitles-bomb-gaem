@@ -2,6 +2,7 @@ var socket = io();
 var modulesFromCenter = {x:0, y:0}
 var moduleCount = 9
 var strikeCount = 0
+const alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
 function updateBombPos(){
   let x, y
@@ -57,8 +58,8 @@ document.onkeydown = (e) => {
     }
   }
 };
-
+//make smart enable and generation
 window.onload = () => {
   buttonModuleT = new ButtonModule(1)
-  buttonModuleT.enable()
+  hexaModuleT = new HexaModule(2)
 }
